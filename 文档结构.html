@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="text" id="first">
+                <span>first text</span>
+            </div>
+            <div class="text" id="second" > second</div>
+            <div class="text" id="third" > third text</div>
+            <div class="text" id="four" > four text</div>
+            <div class="text" id="five" > five text</div>
+            <div class="text" id="six" > six <textarea name="
+                " id="" cols="30" rows="10"></textarea></div>
+        </div>
+    </body>
+    <script>
+        //由于该代码使用频率高，直接写在函数里 这个过程叫做 封装
+        var $ = function(id){
+            return document.querySelector(id);
+        }
+        var ele = $("#wrapper");    // document.querySelector("#wrapper")
+
+        //自启动函数
+        (function(){
+            console.log(ese.children);  //该节点所有的孩子
+            console.log(ese.firstElementChild); //第一个孩子
+            console.log(ese.lastElementChild);  //最后一个孩子
+            console.log(ese.firstElementChild.nexElementSibling);   //第一个孩子的下一个兄弟
+            console.log(ese.ChildElementCount); //子元素的个数
+        })();
+        (function(){
+            console.log(ele.parentNode);    //body
+            console.log(ele.childNodes);    //13 实时表示  包括两部分 text 标签 comment
+            console.log(ele.firstChild);
+            console.log(ele.lastChild);
+
+
+            var ele_first = $("#first");
+            console.log(ele_first.nextSibling); //该元素的下一个兄弟
+            console.log(ele_first.nextSibling.nextSibling.nextSibling); //下一个兄弟的下一个兄弟
+            console.log(ele_first.previousSibling); //前一个兄弟
+        })();
+    </script>
+</html>
